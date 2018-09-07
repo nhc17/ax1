@@ -21,7 +21,7 @@ export class FormComponent implements OnInit {
     console.log('form: ', form.value);
     this.regnSvc
       .addRegn(form.value)
-      .subsbribe((result) =>{
+      .subscribe((result) =>{
         console.log(result);
       });
     form.resetForm();

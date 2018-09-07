@@ -1,5 +1,5 @@
-<div fxLayout="column" fxAlignGap="10px">
-  <form #regn="ngForm" (ngSubmit)="addMyRegn(regn)">
+<div>
+  <form fxLayout="column row" fxLayoutAlign="space-around" fxLayoutGap="20px" #regn="ngForm" (ngSubmit)="addMyRegn(regn)">
   
     <mat-form-field>
       <input type="text" placeholder="Your name"
@@ -25,7 +25,7 @@
       <mat-error *ngIf="passwordField.hasError('password')"></mat-error>
     </mat-form-field>
 
-    <mat-radio-group>
+    <mat-radio-group fxLayoutGap="20px">
       <mat-radio-button type="radio" value="1">Female</mat-radio-button>
       <mat-radio-button Type="radio" value="2">Male</mat-radio-button>
     </mat-radio-group>
@@ -40,27 +40,27 @@
       <div>
 
      
-      <mat-form-field>
+      <mat-form-field fxLayout="column">
        <input type="text" placeholder="Your block or building name"
         #blockField="ngModel"
         name="block" ngModel matInput required>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field fxLayout="column">
         <input type="text" placeholder="Your street name"
         #streetField="ngModel"
         name="street" ngModel matInput required>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field fxLayout="column">
         <input type="text" placeholder="Your unit-number"
         #unitField="ngModel"
         name="unit" ngModel matInput required>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field fxLayout="column">
         <input type="text" placeholder="Your country"
         #countryField="ngModel"
         name="country" ngModel matInput required>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field fxLayout="column">
         <input type="text" placeholder="Your postal code"
         #postalField="ngModel"
         name="postal" ngModel matInput required>
@@ -75,8 +75,8 @@
       <mat-error *ngIf="contactField.hasError('password')"></mat-error>
       </mat-form-field>
   
-      <button type="submit" mat-raised-button color="warn"
-      [disabled]="regn.invalid">Submit</button>
+      <button type="submit" mat-button mat-raised-button color="warn"
+       [disabled]="regn.invalid" class="btn">Submit</button>
 
    </form>
 </div>

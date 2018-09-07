@@ -3,3 +3,11 @@
   width: 150px;
   
 }
+
+.btn {
+  height: 20px;
+  width: 30px;
+  text-align: center;
+  color: black;
+  background-color: red;
+}
